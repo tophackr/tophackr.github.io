@@ -1,0 +1,127 @@
+# Quotes from: https://www.entrepreneur.com/article/241928
+quote_0:
+  quote: |-
+    User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. Get your whole company on board.
+  author: 'Evan Williams'
+  company: 'co-founder of Twitter'
+quote_1:
+  quote: |-
+    No growth hack, brilliant marketing idea, or sales team can save you long-term if you don’t have a sufficiently good product.
+  author: 'Sam Altman'
+  company: 'president of Y Combinator and co-founder of Loopt'
+quote_2:
+  quote: |-
+    The product that wins is the one that bridges customers to the future, not the one that requires a giant leap.
+  author: 'Aaron Levie'
+  company: 'co-founder of Box'
+quote_3:
+  quote: |-
+    The last 10% it takes to launch something takes as much energy as the first 90%.
+  author: 'Rob Kalin'
+  company: 'co-founder of Etsy'
+quote_4:
+  quote: |-
+    Mistakes will not end your business. If you are nimble and willing to listen to constructive criticism you can excel by learning and evolving.
+  author: 'Meridith Valiando Rojas'
+  company: 'co-founder and CEO of DigiTour Media'
+quote_5:
+  quote: |-
+    Make your team feel respected, empowered and genuinely excited about the company’s mission.
+  author: 'Tim Westergren'
+  company: 'co-founder of Pandora'
+quote_6:
+  quote: |-
+    Make something people want” includes making a company that people want to work for.
+  author: 'Sahil Lavingia'
+  company: 'founder of Gumroad'
+quote_7:
+  quote: |-
+    As an entrepreneur, you have to be OK with failure. If you’re not failing, you’re likely not pushing yourself hard enough.
+  author: 'Alexa von Tobel'
+  company: 'founder of LearnVest'
+quote_8:
+  quote: |-
+    Unless you are a fortune-teller, long-term business planning is a fantasy.
+  author: 'Jason Fried'
+  company: 'founder of 37signals'
+quote_9:
+  quote: |-
+    The strategy is to first know what you don’t know, the tactic is to grind, and the value is to remember: there are plenty of places to innovate.
+  author: 'David Friedberg'
+  company: 'founder of Weatherbill'
+quote_10:
+  quote: |-
+    Even if you don’t have the perfect idea to begin with, you can likely adapt.
+  author: 'Victoria Ransom'
+  company: 'co-founder of Wildfire Interactive'
+quote_11:
+  quote: |-
+    Micromanage the process, not the people.
+  author: 'Joe Apfelbaum'
+  company: 'co-founder of Ajax Union'
+quote_12:
+  quote: |-
+    The secret to successful hiring is this: look for the people who want to change the world.
+  author: 'Marc Benioff'
+  company: 'founder of Salesforce'
+quote_13:
+  quote: |-
+    Bad shit is coming. It always is in a startup. The odds of getting from launch to liquidity without some kind of disaster happening are one in a thousand. So don’t get demoralized.
+  author: 'Paul Graham'
+  company: 'co-founder of Y Combinator'
+quote_14:
+  quote: |-
+    Be undeniably good. No marketing effort or social media buzzword can be a substitute for that.
+  author: 'Anthony Volodkin'
+  company: 'founder, Hype Maching'
+quote_15:
+  quote: |-
+    If things are not failing, you are not innovating enough.
+  author: 'Elon Musk'
+  company: 'CEO of SpaceX and Tesla Motors'
+quote_16:
+  quote: |-
+    I think not focusing on money makes you sane, because in the long run it can probably drive you crazy.
+  author: 'Kevin Systrom'
+  company: 'co-founder of Instagram'
+quote_17:
+  quote: |-
+    We must learn what customers really want, not what they say they want or what we think they should want.
+  author: 'Eric Ries'
+  company: 'author of The Lean Startup'
+quote_18:
+  quote: |-
+    Don't start a company unless it's an obsession and something you love. If you have an exit strategy, it's not an obsession.
+  author: 'Mark Cuban'
+  company: 'serial entrepreneur and investor'
+quote_19:
+  quote: |-
+    Sustaining a successful business is a hell of a lot of work, and staying hungry is half the battle.
+  author: 'Wendy Tan White'
+  company: 'co-founder and CEO of MoonFruit'
+
+# Quotes from: https://apptractor.ru/info/articles/citaty-velikih-ajtishnikov.html
+#quote_0:
+#    quote: 'Мы объясняем людям, что если никто не смеялся хотя бы над одной из их идей, они, возможно, недостаточно творчески подходят к работе. Успех — паршивый учитель. Он заставляет умных людей думать, что они не могут проиграть. Ваш лучший источник знаний о бизнесе – это ваш недовольный клиент.'
+#    author: 'Билл Гейтс'
+#    company: 'Microsoft'
+#quote_1:
+#    quote: 'Работать нужно не 12 часов, а головой! Моя бизнес-модель — группа Битлз. Четыре парня контролировали негативные проявления друг друга. Они уравновешивали друг друга, и общий итог оказался больше суммы отдельных частей. Вот как я смотрю на бизнес: крупные дела не делаются одним человеком, они совершаются командой. Половина того, что отделяет успешных предпринимателей от неудачников — это настойчивость.'
+#    author: 'Стив Джобс'
+#    company: 'Apple'
+#quote_2:
+#    quote: 'Здесь я хочу рассказать о своих золотых правилах. Первое: обращайся с другими так, как ты хочешь, чтобы они обращались с тобой. Следуя этому правилу, в любой ситуации будешь знать, что делать. Второе: гордись тем, что делаешь. Третье: делай все с удовольствием. Моя теория [выживание – общественный уклад – удовольствие] возникла не во время изучения звездного неба в ясную ночь и гадания о смысле бытия. Она родилась при подготовке к выступлению. Когда какая-нибудь вещь приносит вам известность, люди почему то начинают ждать от вас небывалых откровений о совершенно посторонних вопросах, которые волновали человечество миллионы лет. И хотят, чтобы вы поделились этими откровениями с толпой абсолютно незнакомых вам людей. Программы — как секс: лучше, когда бесплатно.'
+#    author: 'Линус Торвальдс'
+#    company: 'Creator OS Linux'
+#quote_3:
+#    quote: 'Самое главное в бизнесе — сконцентрироваться на создании чего-то важного. Я просто работал над тем, чем бы мне хотелось самому пользоваться. Если у человека есть мозги, он просто не имеет морального права работать не на себя, отдавая большую часть своего времени и результаты своих достижений своему работодателю.'
+#    author: 'Марк Цукерберг'
+#    company: 'Facebook'
+#quote_4:
+#    quote: 'Я никогда не боялся нанимать людей умнее себя. Можно стыдиться, но нельзя скрывать свои ошибки. Если за вами не гонятся, вам будет сложно достигнуть успеха.'
+#    author: 'Илья Сегалович'
+#    company: 'Yandex'
+#quote_5:
+#    quote: 'Чем активнее ты пробуешь что-то новое, тем больше у тебя шансов наткнуться на что-то действительно стоящее. В моей области важно использовать как можно больше разных продуктов. Я никогда ничего не исключаю. Интернет стал великим потому, что он открыт для всех, не было компании, которая контролировала его.'
+#    author: 'Сергей Брин'
+#    company: 'Google'
