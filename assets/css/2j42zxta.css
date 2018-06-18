@@ -1,0 +1,50 @@
+/**
+ * User avatar
+ */
+
+/*
+@font-face {
+    font-family: Tahoma;
+    src: url('/assets/Tahoma.ttf');
+}
+*/
+
+.f14 {
+    font-size: 14px;
+}
+
+.s20 {
+    height: 20px;
+    width: 20px;
+}
+
+.s32 {
+    font-size: 13px;
+    height: 32px;
+    width: 32px;
+}
+
+.s50 {
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+.s100 {
+    font-size: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+a.link-a,
+a.link-a:hover,
+a.link-a:focus {
+    text-decoration: none;
+}
+
+.btn-discord,
+.btn-discord:hover {
+    color: #fff;
+    background-color: #7289DA;
+    border-color: #7289DA;
+}
