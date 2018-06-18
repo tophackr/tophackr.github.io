@@ -1,0 +1,22 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ page.description | default: site.description | smartify }}">
+    <meta name="author" content="{{ site.author.name }}">
+
+    <title>
+        {%- if page.title -%}
+            {{ page.title | smartify }}
+        {%- else -%}
+            {{ site.title | smartify }}
+        {%- endif -%}
+    </title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/2j42zxta.css?v1' | relative_url }}" type="text/css">
+
+    {% include favicon.html %}
+
+    {% include social.html %}
+</head>
