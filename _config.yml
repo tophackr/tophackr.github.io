@@ -1,0 +1,29 @@
+title: tophackr.com
+description: There must be a description.
+baseurl: ''
+url: 'https://tophackr.gitlab.io'
+email: tophackr@icloud.com
+twitter: tophackr_com
+
+author:
+  username: tophackr
+  name: Alexandr Musikhin
+  post: Developer (net)
+  avatar: /assets/avatar.jpg
+
+instagram: https://instagram.com/tophackr/
+topdisk: https://topdi.sk
+toptheme: https://gitlab.com/tophackr/toptheme
+blog: https://blog.tophackr.com
+status: https://status.tophackr.com
+
+image:
+  logo: /assets/logo.png
+  large: /assets/logo-large.png
+  background: /assets/background.png
+
+markdown: kramdown
+timezone: Europe/Moscow
+encoding: utf-8
+permalink: pretty
+#exclude: ['.gitignore']
