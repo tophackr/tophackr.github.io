@@ -1,7 +1,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="{% if page.title %}summary{% else %}summary_large_image{% endif %}">
-<meta name="twitter:site" content="{{ site.twitter | prepend: '@' }}">
-<meta name="twitter:creator" content="{{ site.twitter | prepend: '@' }}">
+<meta name="twitter:site" content="@{{ site.twitter }}">
+<meta name="twitter:creator" content="@{{ site.twitter }}">
 <meta name="twitter:title" content="{{ page.title | default: site.title | smartify }}">
 <meta name="twitter:description" content="{% if page.title %}{{ page.excerpt | smartify }}{% else %}{{ site.description | smartify }}{% endif %}">
 <meta name="twitter:image" content="{% if page.title %}{{ site.image.logo | absolute_url }}{% else %}{{ site.image.large | absolute_url }}{% endif %}">
