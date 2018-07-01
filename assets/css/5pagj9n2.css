@@ -1,0 +1,11 @@
+.btn-share,
+.btn-share:hover {
+    color: #fff;
+    background-color: #65a9e6;
+    border-color: #65a9e6;
+}
+
+blockquote {
+    border-left: 4px solid #808080;
+    padding-left: 1rem;
+}
