@@ -1,4 +1,33 @@
+{% if page.url != '/' %}
+<footer class="container my-5">
+    <hr>
+    <div class="row">
+        <div class="col-md-8">
+            <strong>{{ site.title }}</strong>
+            <p>{{ site.description }}</p>
+        </div>
+        <div class="col-md-2">
+            <strong>About</strong>
+            <p>
+                <a href="{{ '/blog/' | relative_url }}">blog</a>
+                <br>
+                <a href="https://status.tophackr.com">status</a>
+            </p>
+        </div>
+        <div class="col-md-2">
+            <strong>Services</strong>
+            <p>
+                <a href="https://topdi.sk">topdisk</a>
+                <br>
+                <a href="https://gitlab.com/tophackr/toptheme">toptheme</a>
+            </p>
+        </div>
+    </div>
+</footer>
+{% endif %}
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" type="text/javascript"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javascript">$('[data-toggle="tooltip"]').tooltip();</script>
+<script async src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
