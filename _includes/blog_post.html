@@ -1,0 +1,31 @@
+{% assign item = include.item %}
+<div class="mb-5">
+    <h1>
+        {%- if item == page -%}
+            {{ item.title }}
+        {%- else -%}
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {%- endif -%}
+    </h1>
+    {{ item.content }}
+    <div class="my-4">
+        <em>
+            {{ item.date | date: '%B %d, %Y' }}
+            <br>
+            {{ item.author }}
+        </em>
+    </div>
+    {% if item.ps %}
+    <div class="my-2">
+        {{ item.ps }}
+    </div>
+    {% endif %}
+    <a href="https://t.me/share/url?url={{ item.url | absolute_url | url_encode }}&text={{ item.title | url_encode }}" class="btn btn-share btn-sm my-1 mr-3" target="_blank" aria-labelledby="Telegram forward">
+        <i class="fab fa-telegram-plane mr-1"></i>
+        <b class="f14">Forward</b>
+    </a>
+    <a href="https://twitter.com/intent/tweet?text={{ item.title | url_encode }}&url={{ item.url | absolute_url | url_encode }}&via={{ site.twitter }}" class="btn btn-share btn-sm my-1 mr-3" aria-labelledby="Twitter share">
+        <i class="fab fa-twitter mr-1"></i>
+        <b class="f14">Tweet</b>
+    </a>
+</div>
