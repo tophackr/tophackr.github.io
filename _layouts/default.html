@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 {% include header.html %}
-<body style="background-image: url('{{ site.image.background | relative_url }}');">
+<body{% if page.url == '/' %} style="background-image: url('{{ site.image.background | relative_url }}');"{% endif %}>
     {% include navbar.html %}
-    <div class="page-header" style="background-image: url('{{ site.image.background | relative_url }}'); background-size: cover; background-position: top center;">
-        <div class="container my-5">
-            {{ content }}
-        </div>
+    <div class="container">
+        {{ content }}
     </div>
     {% include footer.html %}
 </body>
