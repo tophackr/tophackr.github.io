@@ -1,5 +1,5 @@
 ---
-layout: apps
+layout: page
 title: 'tophackr apps'
 ---
 
