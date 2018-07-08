@@ -17,6 +17,13 @@
                 <li class="nav-item">
                     <a class="nav-link{% if page.layout == 'apps' %} active{% endif %}" href="{{ '/apps/' | relative_url }}">apps</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">about</a>
+                    <div class="dropdown-menu">
+                        <a href="{{ '/branding/' | relative_url }}" class="dropdown-item">branding</a>
+                        <a href="{{ site.status }}" class="dropdown-item">status</a>
+                    </div>
+                </li>
             </ul>
         </div>
         <ul class="navbar-nav ml-md-auto d-none d-lg-flex">
