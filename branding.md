@@ -8,28 +8,28 @@ layout: page
     <div class="col-md-6">
         <div class="card my-2">
             <div class="card-body card-img white-bg">
-                <img src="/assets/brand/logo.svg" style="padding: 1.5rem 6rem 1.5rem 6rem !important;">
+                <img src="{{ '/assets/brand/logo.svg' | relative_url }}" style="padding: 1.5rem 6rem 1.5rem 6rem !important;">
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="card my-2">
             <div class="card-body card-img bg">
-                <img src="/assets/brand/logo.svg" style="padding: 1.5rem 6rem 1.5rem 6rem !important;">
+                <img src="{{ '/assets/brand/logo.svg' | relative_url }}" style="padding: 1.5rem 6rem 1.5rem 6rem !important;">
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="card my-2">
             <div class="card-body card-img white-bg">
-                <img src="/assets/brand/tophackr.svg">
+                <img src="{{ '/assets/brand/tophackr.svg' | relative_url }}">
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="card my-2">
             <div class="card-body card-img bg">
-                <img src="/assets/brand/tophackr.svg">
+                <img src="{{ '/assets/brand/tophackr.svg' | relative_url }}">
             </div>
         </div>
     </div>
