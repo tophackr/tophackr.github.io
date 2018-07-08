@@ -15,12 +15,12 @@
                     <a class="nav-link{% if page.layout == 'blog' or page.layout == 'blog_post' %} active{% endif %}" href="{{ '/blog/' | relative_url }}">blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{% if page.layout == 'apps' %} active{% endif %}" href="{{ '/apps/' | relative_url }}">apps</a>
+                    <a class="nav-link{% if page.url == '/apps/' | relative_url %} active{% endif %}" href="{{ '/apps/' | relative_url }}">apps</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">about</a>
                     <div class="dropdown-menu">
-                        <a href="{{ '/branding/' | relative_url }}" class="dropdown-item">branding</a>
+                        <a href="{{ '/branding/' | relative_url }}" class="dropdown-item{% if page.url == '/branding/' | relative_url %} active{% endif %}">branding</a>
                         <a href="{{ site.status }}" class="dropdown-item">status</a>
                     </div>
                 </li>
