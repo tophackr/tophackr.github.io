@@ -12,17 +12,10 @@
                     <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{% if page.layout == 'blog' or page.layout == 'blog_post' %} active{% endif %}" href="{{ '/blog/' | relative_url }}">blog</a>
+                    <a class="nav-link" href="{{ site.blog }}">blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{% if page.url == '/apps/' | relative_url %} active{% endif %}" href="{{ '/apps/' | relative_url }}">apps</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">about</a>
-                    <div class="dropdown-menu">
-                        <a href="{{ '/branding/' | relative_url }}" class="dropdown-item{% if page.url == '/branding/' | relative_url %} active{% endif %}">branding</a>
-                        <a href="{{ site.status }}" class="dropdown-item">status</a>
-                    </div>
+                    <a class="nav-link" href="{{ site.status }}">status</a>
                 </li>
             </ul>
         </div>
@@ -35,6 +28,11 @@
             <li class="nav-item">
                 <a class="nav-link p-2" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
                     <i class="fab fa-twitter fa-fw fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="{{ site.gitlab }}" target="_blank" rel="noopener" aria-label="GitLab">
+                    <i class="fab fa-gitlab fa-fw fa-lg"></i>
                 </a>
             </li>
             <li class="nav-item">
