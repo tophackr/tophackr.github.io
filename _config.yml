@@ -3,7 +3,6 @@ description: There must be a description.
 baseurl: ''
 url: 'https://tophackr.com'
 email: tophackr@icloud.com
-twitter: tophackr_com
 
 author:
   username: tophackr
@@ -11,10 +10,15 @@ author:
   post: Developer (net)
   avatar: /assets/avatar.jpg
 
-instagram: https://instagram.com/tophackr/
-topdisk: https://topdi.sk
-toptheme: https://gitlab.com/tophackr/toptheme
+blog: https://medium.com/@tophackr
 status: https://status.tophackr.com
+
+instagram: https://instagram.com/tophackr/
+twitter: tophackr_com
+gitlab: https://gitlab.com/tophackr
+
+teamspeak: ts3server://fyfywka.com
+discord: https://discord.gg/mDE2WFZ
 
 image:
   logo: /assets/logo.png
@@ -24,5 +28,4 @@ image:
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
-permalink: /blog/:title/
 #exclude: ['.gitignore']
