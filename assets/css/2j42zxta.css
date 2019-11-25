@@ -56,6 +56,12 @@ a.link-a:focus {
     background-color: #7289DA;
     border-color: #7289DA;
 }
+.btn-teamspeak,
+.btn-teamspeak:hover {
+    color: #fff;
+    background-color: #6FE69B;
+    border-color: #6FE69B;
+}
 
 .white-bg {
     background-color: #fff;
