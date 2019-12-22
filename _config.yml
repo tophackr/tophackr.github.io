@@ -20,11 +20,6 @@ gitlab: https://gitlab.com/tophackr
 teamspeak: ts3server://fyfywka.com
 discord: https://discord.gg/mDE2WFZ
 
-image:
-  logo: /assets/logo.png
-  large: /assets/logo-large.png
-  background: /assets/background.png
-
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
