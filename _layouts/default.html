@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 {% include header.html %}
-<body{% if page.url == '/' %} style="background-image: url('{{ site.image.background | relative_url }}');"{% endif %}>
+<body{% if page.url == '/' %} style="background-image: url('{{ '/assets/background.png' | relative_url }}');"{% endif %}>
     {% include navbar.html %}
     <div class="container">
         {{ content }}
