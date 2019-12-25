@@ -112,3 +112,5 @@ p {
 <div class="text-center">
     <a href="https://mega.nz/#F!6NpF2QDI!Yi3kNEqeb3c4OHUZwIhbwQ" class="btn btn-primary btn-lg" style="margin: 3rem;">Download</a>
 </div>
+
+<script async src="https://comments.app/js/widget.js?2" data-comments-app-website="2g9joENn" data-limit="10" data-page-id="branding" data-dislikes="1"></script>
