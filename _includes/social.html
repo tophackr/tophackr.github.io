@@ -4,15 +4,15 @@
 <meta name="twitter:creator" content="@{{ site.twitter }}">
 <meta name="twitter:title" content="{{ page.title | default: site.title | smartify }}">
 <meta name="twitter:description" content="{% if page.title %}{{ page.excerpt | strip_html | smartify }}{% else %}{{ site.description | smartify }}{% endif %}">
-<meta name="twitter:image" content="{% if page.title %}{{ '/assets/avatar.png' | absolute_url }}{% else %}{{ '/assets/avatar-dev.png' | absolute_url }}{% endif %}">
+<meta name="twitter:image" content="{% if page.title %}{{ '/assets/avatar.png' | absolute_url }}{% else %}{{ '/assets/avatar-dev.jpg' | absolute_url }}{% endif %}">
 
 <!-- Facebook -->
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{{ page.title | default: site.title | smartify }}">
 <meta property="og:description" content="{% if page.title %}{{ page.excerpt | strip_html | smartify }}{% else %}{{ site.description | smartify }}{% endif %}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="{{ '/assets/avatar-dev.png' | absolute_url }}">
-<meta property="og:image:secure_url" content="{{ '/assets/avatar-dev.png' | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/avatar-dev.jpg' | absolute_url }}">
+<meta property="og:image:secure_url" content="{{ '/assets/avatar-dev.jpg' | absolute_url }}">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
