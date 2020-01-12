@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Feedback
 ---
 
 <div id="feedback">
