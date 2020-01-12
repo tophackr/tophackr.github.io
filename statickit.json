@@ -1,0 +1,33 @@
+{
+  "forms": {
+    "feedback": {
+      "name": "Feedback",
+      "actions": {
+        "email": [
+          {
+            "to": "tophackr@icloud.com"
+          }
+        ]
+      },
+      "fields": {
+        "name": {
+          "type": "text"
+        },
+        "email": {
+          "type": "email",
+          "required": true
+        },
+        "product": {
+          "type": "text"
+        },
+        "message": {
+          "type": "text",
+          "required": true
+        },
+        "metadata": {
+          "type": "text"
+        }
+      }
+    }
+  }
+}
