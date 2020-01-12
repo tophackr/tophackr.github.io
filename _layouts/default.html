@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html>
-{% include header.html %}
-<body{% if page.url == '/' %} style="background-image: url('{% link assets/background.png %}');"{% endif %}>
-    {% include navbar.html %}
-    <div class="container">
+<head>
+    {%- assign title = page.title | default: 'Alexandr Musikhin' -%}
+    {%- assign twitter = 'tophackr_com' | prepend: '@' -%}
+    {%- capture description -%}{% if page.description %}{{ page.description | strip_html | smartify }}{% elsif page.title %}{{ page.excerpt | strip_html | smartify }}{% else %}{{ site.description | smartify }}{% endif %}{%- endcapture -%}
+    {%- capture image -%}{% link assets/alexandr-musikhin-picture.png %}{%- endcapture -%}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ description }}">
+    <meta name="author" content="Alexandr Musikhin">
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}Alexandr Musikhin</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7c8eec21b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% link assets/main.css %}">
+
+    <link rel="icon" href="{% link favicon.png %}" sizes="32x32">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ twitter }}">
+    <meta name="twitter:creator" content="{{ twitter }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ image }}">
+
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ image }}">
+
+    <meta name="x-build-time" content="{{ site.time | date_to_rfc822 }}">
+    <link rel="alternate" type="application/rss+xml" title="tophackr blog" href="https://medium.com/feed/tophackr">
+
+    <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(47237412, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/47237412" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117276892-2"></script>
+    <script type="text/javascript"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-117276892-2'); </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+            {% if page.url == '/' %}
+            <img src="{% link assets/gear.png %}" width="30" height="30" alt="Alexandr Musikhin">
+            {% else %}
+            <span class="nav-item">Alexandr Musikhin</span>
+            {% endif %}
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#tophackr-navbar" aria-controls="tophackr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="tophackr-navbar">
+                <div class="navbar-nav ml-md-auto">
+                    <a class="nav-item nav-link{% if page.url == '/' %} active{% endif %}" href="{% link index.md %}">Home</a>
+                    <a class="nav-item nav-link{% if page.name == 'projects.md' %} active{% endif %}" href="{% link projects.md %}">Projects</a>
+                    <a class="nav-item nav-link{% if page.name == 'about.md' %} active{% endif %}" href="{% link about.md %}">About</a>
+                    <a class="nav-item nav-link{% if page.name == 'contact.md' %} active{% endif %}" href="{% link contact.md %}">Contact</a>
+                    <a class="nav-item nav-link{% if page.name == 'donate.md' %} active{% endif %}" href="{% link donate.md %}">Donate</a>
+                    <a class="nav-item nav-link" href="https://medium.com/@tophackr">Blog</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid container-sm">
         {{ content }}
     </div>
-    {% include footer.html %}
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    {% if page.name == 'feedback.md' %}
+    <script defer src="https://js.statickit.com/statickit.js"></script>
+    <script defer src="{% link assets/feedback.js %}"></script>
+    {% endif %}
 </body>
 </html>
