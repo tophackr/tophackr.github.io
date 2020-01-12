@@ -2,25 +2,14 @@ title: tophackr.com
 description: There must be a description.
 baseurl: ''
 url: 'https://tophackr.com'
-email: tophackr@icloud.com
 
-author:
-  username: tophackr
-  name: Alexandr Musikhin
-  post: Developer (net)
-  avatar: /assets/avatar.jpg
-
-blog: https://medium.com/@tophackr
-status: https://status.tophackr.com
-
-instagram: https://instagram.com/tophackr/
-twitter: tophackr_com
-gitlab: https://gitlab.com/tophackr
-
-teamspeak: ts3server://fyfywka.com
-discord: https://discord.gg/mDE2WFZ
+collections:
+  projects:
+    output: true
+    permalink: /:title
 
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
+permalink: slug
 #exclude: ['.gitignore']
