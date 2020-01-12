@@ -39,8 +39,8 @@
     <script type="text/javascript"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-117276892-2'); </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+    <nav class="navbar navbar-expand navbar-light">
+        <div class="container flex-column flex-md-row">
 
             {% if page.url == '/' %}
             <img src="{% link assets/gear.png %}" width="30" height="30" alt="Alexandr Musikhin">
@@ -48,19 +48,27 @@
             <span class="nav-item">Alexandr Musikhin</span>
             {% endif %}
 
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#tophackr-navbar" aria-controls="tophackr-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse collapse" id="tophackr-navbar">
-                <div class="navbar-nav ml-md-auto">
-                    <a class="nav-item nav-link{% if page.url == '/' %} active{% endif %}" href="{% link index.md %}">Home</a>
-                    <a class="nav-item nav-link{% if page.name == 'projects.md' %} active{% endif %}" href="{% link projects.md %}">Projects</a>
-                    <a class="nav-item nav-link{% if page.name == 'about.md' %} active{% endif %}" href="{% link about.md %}">About</a>
-                    <a class="nav-item nav-link{% if page.name == 'contact.md' %} active{% endif %}" href="{% link contact.md %}">Contact</a>
-                    <a class="nav-item nav-link{% if page.name == 'donate.md' %} active{% endif %}" href="{% link donate.md %}">Donate</a>
-                    <a class="nav-item nav-link" href="https://medium.com/@tophackr">Blog</a>
-                </div>
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav flex-row ml-md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{% link index.md %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.name == 'projects.md' %} active{% endif %}" href="{% link projects.md %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.name == 'about.md' %} active{% endif %}" href="{% link about.md %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.name == 'contact.md' %} active{% endif %}" href="{% link contact.md %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.name == 'donate.md' %} active{% endif %}" href="{% link donate.md %}">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://medium.com/@tophackr">Blog</a>
+                    </li>
+                </ul>
             </div>
 
         </div>
