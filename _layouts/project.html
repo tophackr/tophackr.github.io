@@ -20,7 +20,8 @@ layout: default
                 {% if page.repo %}
                 <a class="nav-link" href="{{ page.repo }}">Source on GitHub</a>
                 {% endif %}
-                <a class="nav-link" href="http://localhost:4000/feedback?project={{ page.title | url_encode }}">Support</a>
+                {% assign title = page.title | url_encode %}
+                <a class="nav-link" href="{{ title | prepend: '/feedback?project=' | absolute_url }}">Support</a>
                 {% for link in page.links %}
                 <a class="nav-link" href="{{ link[1] }}">{{ link[0] }}</a>
                 {% endfor %}
