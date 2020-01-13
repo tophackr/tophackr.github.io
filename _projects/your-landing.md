@@ -7,5 +7,5 @@ date: 2020-01-08
 large_button:
   name: Read more
   url: https://medium.com/tophackr/5187e351f905
-repo: https://gitlab.com/your-landing/example-1
+repo: https://github.com/your-landing
 ---
