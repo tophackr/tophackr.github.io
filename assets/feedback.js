@@ -112,7 +112,7 @@ ${params.get('metadata') || ''}
             $('#feedback').html('<h1>Thanks for the feedback!</h1><p>You will now be redirected to my website.</p>');
 
             setTimeout(() => {
-                window.location.href = 'http://localhost:4000';
+                window.location.href = 'https://tophackr.com';
             }, 3000);
         }
     });
