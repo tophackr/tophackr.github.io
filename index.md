@@ -12,13 +12,13 @@ layout: default
             <i class="fas fa-pencil-alt"></i>
             Writing
         </a>
-        <a class="btn btn-light btn-lg" href="https://github.com/tophackr">
-            <i class="fab fa-github"></i>
-            Code
-        </a>
         <a class="btn btn-light btn-lg" href="https://instagram.com/tophackr/">
             <i class="fab fa-instagram"></i>
             Photography
+        </a>
+        <a class="btn btn-light btn-lg" href="https://github.com/tophackr">
+            <i class="fab fa-github"></i>
+            Code
         </a>
     </div>
 </div>
