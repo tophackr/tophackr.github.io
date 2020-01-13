@@ -14,7 +14,7 @@ I was born in Tyumen, Russia, and then moved to Anapa. In this city, I learned t
 
 ### Social links
 
-- [GitLab](https://gitlab.com/tophackr)
+- [GitHub](https://github.com/tophackr)
 - [Instagram](https://instagram.com/tophackr/)
 - [Twitter](https://twitter.com/tophackr_com)
 - [Unsplash](https://unsplash.com/@tophackr)
