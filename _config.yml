@@ -12,7 +12,4 @@ markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
 permalink: slug
-plugins:
-  - jekyll-sitemap
-  #- jekyll-redirect-from
 #exclude: ['.gitignore']
