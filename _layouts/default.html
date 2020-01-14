@@ -4,7 +4,19 @@
     {%- assign title = page.title | default: 'Alexandr Musikhin' -%}
     {%- assign twitter = 'tophackr_com' | prepend: '@' -%}
     {%- capture description -%}{% if page.description %}{{ page.description | strip_html | smartify }}{% elsif page.title %}{{ page.excerpt | strip_html | smartify }}{% else %}{{ site.description | smartify }}{% endif %}{%- endcapture -%}
-    {%- capture image -%}{% link assets/alexandr-musikhin-picture.png %}{%- endcapture -%}
+    {%- capture image -%}
+        {%- if page.collection == 'projects' -%}
+            {%- for file in site.static_files -%}
+                {%- assign path = 'assets/' | append: page.slug | append: '/icon' -%}
+                {%- if file.path contains path -%}
+                    {{ file.path | absolute_url }}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- else -%}
+            {{ 'assets/alexandr-musikhin-picture.png' | absolute_url }}
+        {%- endif -%}
+    {%- endcapture -%}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ description }}">
@@ -60,9 +72,9 @@
                     <li class="nav-item">
                         <a class="nav-link{% if page.name == 'about.md' %} active{% endif %}" href="{% link about.md %}">About</a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link{% if page.name == 'contact.md' %} active{% endif %}" href="{% link contact.md %}">Contact</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link{% if page.name == 'donate.md' %} active{% endif %}" href="{% link donate.md %}">Donate</a>
                     </li>
