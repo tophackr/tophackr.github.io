@@ -17,7 +17,7 @@ window.sk=window.sk||function(){(sk.q=sk.q||[]).push(arguments)};
 
     const repoUrls = {
         {% for project in site.projects %}
-            {%- if project.repo -%}
+            {%- if project.repo and project.feedback_repo != false -%}
         '{{ project.title }}': '{{ project.repo }}',
             {%- endif -%}
         {% endfor %}
