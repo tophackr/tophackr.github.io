@@ -28,13 +28,24 @@ layout: default
             </nav>
         </div>
         <div class="my-5">
-            {{ content }}
+            {% if page.description %}
+            <div class="row">
+                <div class="col-12">
+                    <p>{{ page.description }}</p>
+                </div>
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-12">
+                    {{ content }}
+                </div>
+            </div>
         </div>
         <div class="mb-4">
             {% for file in site.static_files %}
                 {% assign path = 'assets/' | append: page.slug | append: '/picture' %}
                 {% if file.path contains path %}
-            <img class="img-thumbnail my-2" src="{{ file.path }}">
+            <img class="img-fluid rounded my-2" src="{{ file.path }}">
                 {% endif %}
             {% endfor %}
         </div>
