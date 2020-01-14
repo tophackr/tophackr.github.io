@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/tophackr
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tophackr.com
+  * I am tophackr (https://keybase.io/tophackr) on keybase.
+  * I have a public key ASD8tPICQlvm8Sj3-Ob64TJogCfwhcFcBhQCjve-dE5a3go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101c91cca8ef87327a80ea69f34868c50f7ec58e88e2f1a7c733c1ab3b4226f635e0a",
+      "host": "keybase.io",
+      "kid": "0120fcb4f202425be6f128f7f8e6fae132688027f085c15c0614028ef7be744e5ade0a",
+      "uid": "e4710c928f402e8c015a87eca87f5d19",
+      "username": "tophackr"
+    },
+    "merkle_root": {
+      "ctime": 1579007728,
+      "hash": "6b87084e5b0d49f05e8f9ceff5aa37bee1182861826f8ae026fd5c7809956b64287b10e6eb2b9a5c732b7c0cd693226587dac73236889b0be54f4d86d3725235",
+      "hash_meta": "031e14d74b92c748611124c198b0d68dfe93f628db4cc85684ae7c3e106ca99c",
+      "seqno": 14220917
+    },
+    "service": {
+      "entropy": "0CYn8IPb5KuZ2C42Ya/ibJWT",
+      "hostname": "tophackr.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.1.1"
+  },
+  "ctime": 1579007744,
+  "expire_in": 504576000,
+  "prev": "7bd3c3344558f25690c3117f1dad55db66267492c98e5f12dd2a784ef9262f8c",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/LTyAkJb5vEo9/jm+uEyaIAn8IXBXAYUAo73vnROWt4Kp3BheWxvYWTESpcCFsQge9PDNEVY8laQwxF/Ha1V22YmdJLJjl8S3Sp4TvkmL4zEINSvSj2W5D5ccIuK0SCww4bttUT4Y+fModOpXedCSqMWAgHCo3NpZ8RAdYfwDJu4peDyEw/L4QvU59kYVSEYQjPAnWrNlRjZeq8pHIiJVl8fC/1ScFqO9uyqm+9NRF68mCoelR1ZAGA2CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILCvDwTr8RIt0u31lbQt7/+lidUfXjslEbFuqp5O8uRao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tophackr
+
+==================================================================
