@@ -45,6 +45,29 @@
 .is-card:hover .card-title span:first-child {
     text-decoration: underline;
 }
+blockquote {
+    border-left: 3px solid #ccc;
+    color: #6c757d;
+}
+blockquote p {
+    margin-left: .75rem;
+    margin-bottom: 0;
+}
+.highlight > pre {
+    font-size: 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    background-color: #eef;
+}
+.highlight > pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+}
+.highlight > pre > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
 @media (min-width: 768px) {
     .content {
         -ms-flex-align: center;
