@@ -4,7 +4,7 @@ title: Ctinal
 subtitle: Theme for Telegram
 type: TG Theme
 date: 2020-01-01
-large_button:
-  name: Read more
-  url: https://medium.com/tophackr/a4b1dcaead96
+links:
+  "Ctinal day": https://t.me/addtheme/ctinal_day
+  "Ctinal night": https://t.me/addtheme/ctinal_night
 ---
