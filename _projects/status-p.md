@@ -8,6 +8,8 @@ large_button:
   name: Check Status
   url: https://status.tophackr.com
 repo: https://github.com/tophackr/status
+links:
+  "Other Status": https://github.com/tophackr/status-other
 ---
 
 This [service][status] is created to track tophackr services.  
