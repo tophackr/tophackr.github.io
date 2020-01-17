@@ -20,6 +20,9 @@
     border-radius: 50%;
     width: 200px;
 }
+.icon {
+    border-radius: 50%;
+}
 .subtitle {
     color: #6c757d;
     font-weight: 300;
