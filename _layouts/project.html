@@ -8,7 +8,7 @@ layout: default
             {% for file in site.static_files %}
                 {% assign path = 'assets/' | append: page.slug | append: '/icon' %}
                 {% if file.path contains path %}
-            <img class="img-fluid" src="{{ file.path }}" width="256">
+            <img class="img-fluid icon" src="{{ file.path }}" width="256">
                 {% endif %}
             {% endfor %}
             <h1 class="mt-4">{{ page.title }}</h1>
