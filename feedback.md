@@ -5,7 +5,7 @@ title: Feedback
 
 <div id="feedback">
     <div class="text-center">
-        <img id="project-icon" class="img-fluid" width="200">
+        <img id="project-icon" class="img-fluid icon" width="200">
         <h1 class="my-4">Feedback</h1>
         <div id="addinfo"></div>
     </div>
