@@ -9,6 +9,6 @@ large_button:
   url: https://medium.com/tophackr/2a51bdb7313a
 repo: https://github.com/tophackr/github-stat
 links:
-  "Check your Stat": https://gitstat.tophackr.com,
+  "Check your Stat": https://gitstat.tophackr.com
   "ProductHunt post": https://www.producthunt.com/posts/github-stat
 ---
