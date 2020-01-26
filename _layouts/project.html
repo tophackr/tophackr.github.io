@@ -2,53 +2,55 @@
 layout: default
 ---
 
-<div class="row justify-content-center">
-    <div class="col-md-8 mt-5">
-        <div class="text-center">
-            {% for file in site.static_files %}
-                {% assign path = 'assets/' | append: page.slug | append: '/icon' %}
-                {% if file.path contains path %}
-            <img class="img-fluid icon" src="{{ file.path }}" width="256">
-                {% endif %}
-            {% endfor %}
-            <h1 class="mt-4">{{ page.title }}</h1>
-            <p class="subtitle is-4 mb-3">{{ page.subtitle }}</p>
-            {% if page.large_button %}
-            <a href="{{ page.large_button.url }}" class="btn btn-outline-dark btn-lg">{{ page.large_button.name }}</a>
-            {% endif %}
-            <nav class="nav flex-column">
-                {% if page.repo %}
-                <a class="nav-link" href="{{ page.repo }}">Source on GitHub</a>
-                {% endif %}
-                {% assign title = page.title | url_encode %}
-                <a class="nav-link" href="{{ title | prepend: '/feedback?project=' | absolute_url }}">Support</a>
-                {% for link in page.links %}
-                <a class="nav-link" href="{{ link[1] }}">{{ link[0] }}</a>
+<div class="container-fluid container-sm">
+    <div class="row justify-content-center">
+        <div class="col-md-8 mt-5">
+            <div class="text-center">
+                {% for file in site.static_files %}
+                    {% assign path = 'assets/' | append: page.slug | append: '/icon' %}
+                    {% if file.path contains path %}
+                <img class="img-fluid icon" src="{{ file.path }}" width="256">
+                    {% endif %}
                 {% endfor %}
-            </nav>
-        </div>
-        <div class="my-5">
-            {% if page.description %}
-            <div class="row">
-                <div class="col-12">
-                    <p>{{ page.description }}</p>
-                </div>
-            </div>
-            {% endif %}
-            <div class="row">
-                <div class="col-12">
-                    {{ content }}
-                </div>
-            </div>
-        </div>
-        <div class="mb-4">
-            {% for file in site.static_files %}
-                {% assign path = 'assets/' | append: page.slug | append: '/picture' %}
-                {% if file.path contains path %}
-            <img class="img-fluid rounded my-2" src="{{ file.path }}">
+                <h1 class="mt-4">{{ page.title }}</h1>
+                <p class="subtitle is-4 mb-3">{{ page.subtitle }}</p>
+                {% if page.large_button %}
+                <a href="{{ page.large_button.url }}" class="btn btn-outline-dark btn-lg">{{ page.large_button.name }}</a>
                 {% endif %}
-            {% endfor %}
+                <nav class="nav flex-column">
+                    {% if page.repo %}
+                    <a class="nav-link" href="{{ page.repo }}">Source on GitHub</a>
+                    {% endif %}
+                    {% assign title = page.title | url_encode %}
+                    <a class="nav-link" href="{{ title | prepend: '/feedback?project=' | absolute_url }}">Support</a>
+                    {% for link in page.links %}
+                    <a class="nav-link" href="{{ link[1] }}">{{ link[0] }}</a>
+                    {% endfor %}
+                </nav>
+            </div>
+            <div class="my-5">
+                {% if page.description %}
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ page.description }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="row">
+                    <div class="col-12">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                {% for file in site.static_files %}
+                    {% assign path = 'assets/' | append: page.slug | append: '/picture' %}
+                    {% if file.path contains path %}
+                <img class="img-fluid rounded my-2" src="{{ file.path }}">
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <script async src="https://comments.app/js/widget.js?2" data-comments-app-website="2g9joENn" data-limit="10" data-page-id="{{ page.url }}" data-dislikes="1"></script>
         </div>
-        <script async src="https://comments.app/js/widget.js?2" data-comments-app-website="2g9joENn" data-limit="10" data-page-id="{{ page.url }}" data-dislikes="1"></script>
     </div>
 </div>
