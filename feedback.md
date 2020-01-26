@@ -31,6 +31,6 @@ title: Feedback
             <textarea class="form-control" name="message" id="form__message" minlength="20" rows="7" required autofocus></textarea>
             <div data-sk-error="message"></div>
         </div>
-        <button type="submit" class="btn btn-primary">Send Feedback</button>
+        <button type="submit" class="btn btn-primary m-0">Send Feedback</button>
     </form>
 </div>
