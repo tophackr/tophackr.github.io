@@ -46,7 +46,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.home.rss.name }}" href="{{ site.home.rss.url }}">
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-light{% if page.url %} fixed-top{% endif %}">
+    <nav class="navbar navbar-expand navbar-light{% if page.url == '/' %} fixed-top{% endif %}">
         <div class="container-fluid container-sm flex-column flex-md-row">
 
             {% if page.url == '/' %}
