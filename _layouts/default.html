@@ -57,7 +57,7 @@
 
             <div class="navbar-nav-scroll">
                 <ul class="navbar-nav flex-row ml-md-auto">
-                    {% for item in site.home.navbar %}
+                    {%- for item in site.home.navbar -%}
                     <li class="nav-item">
                         {%- if item.file -%}
                         <a class="nav-link{% if page.name == item.file %} active{% endif %}" href="{% link item.file %}">{{ item.name }}</a>
@@ -65,6 +65,7 @@
                         <a class="nav-link" href="{{ item.url }}">{{ item.name }}</a>
                         {%- endif -%}
                     </li>
+                    {%- endfor -%}
                 </ul>
             </div>
 
