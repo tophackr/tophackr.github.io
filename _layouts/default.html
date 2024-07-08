@@ -59,11 +59,7 @@
                 <ul class="navbar-nav flex-row ml-md-auto">
                     {%- for item in site.home.navbar -%}
                     <li class="nav-item">
-                        {%- if item.file -%}
-                        <a class="nav-link{% if page.name == item.file %} active{% endif %}" href="{% link item.file %}">{{ item.name }}</a>
-                        {%- else -%}
-                        <a class="nav-link" href="{{ item.url }}">{{ item.name }}</a>
-                        {%- endif -%}
+                        <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
                     </li>
                     {%- endfor -%}
                 </ul>

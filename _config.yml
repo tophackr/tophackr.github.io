@@ -16,13 +16,13 @@ home:
     url: "https://blog.tophackr.com/data/rss"
   navbar:
     - name: Home
-      file: index.md
+      url: '/'
     - name: Projects
-      file: projects.md
+      file: '/projects'
     - name: About
-      file: about.md
+      file: '/about'
     - name: Donate
-      file: donate.md
+      file: '/donate'
     - name: Blog
       url: "https://blog.tophackr.com"
   buttons:
