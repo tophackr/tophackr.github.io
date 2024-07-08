@@ -22,7 +22,7 @@ layout: default
                     <a class="nav-link" href="{{ page.repo }}">Source on GitHub</a>
                     {% endif %}
                     {% assign title = page.title | url_encode %}
-                    <a class="nav-link" href="{{ site.author.email | prepend: 'mailto:' | uri_escape | append: 'subject?=' | append: title }}">Support</a>
+                    <a class="nav-link" href="{{ site.author.email | prepend: 'mailto:' | uri_escape | append: '?subject=' | append: title }}">Support</a>
                     {% for link in page.links %}
                     <a class="nav-link" href="{{ link[1] }}">{{ link[0] }}</a>
                     {% endfor %}
@@ -51,6 +51,7 @@ layout: default
                 {% endfor %}
             </div>
             <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="xQFIyFjK" data-limit="10" data-page-id="{{ page.url }}" data-dislikes="1"></script>
+            <div class="mt-5"></div>
         </div>
     </div>
 </div>
