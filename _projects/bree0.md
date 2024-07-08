@@ -1,12 +1,11 @@
 ---
 layout: project
 title: Bree0 Bot
-subtitle: Platform for your site, basic Jekyll and Git
-description: Your Landing is a platform on which you can create your site, you need to know the basic Jekyll and Git
-type: Web Layout
-date: 2020-01-08
-repo: https://github.com/your-landing
-feedback_repo: false
-links:
-  "Docs": https://github.com/your-landing/example-1/wiki
+subtitle: Multifunctional Bot for Discord
+description: The bot is designed to improve the participant's interaction with the client. Clans, Server Banner, Activity and Levels!
+type: Discord App
+date: 2024-07-01
+large_button:
+  name: Support Server
+  url: https://discord.gg/mDE2WFZ
 ---
