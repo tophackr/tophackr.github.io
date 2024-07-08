@@ -1,12 +1,11 @@
 <html>
 <head>
-    {%- assign title = page.title | default: 'Alexandr Musikhin' -%}
-    {%- assign twitter = 'tophackr_com' | prepend: '@' -%}
+    {%- assign title = page.title | default: site.author.name -%}
     {%- capture description -%}{% if page.description %}{{ page.description | strip_html | smartify }}{% elsif page.title %}{{ page.excerpt | strip_html | smartify }}{% else %}{{ site.description | smartify }}{% endif %}{%- endcapture -%}
     {%- capture image -%}
         {%- if page.collection == 'projects' -%}
             {%- for file in site.static_files -%}
-                {%- assign path = 'assets/' | append: page.slug | append: '/icon' -%}
+                {%- assign path = 'assets/' | append: page.slug | append: '/thumbnail' -%}
                 {%- if file.path contains path -%}
                     {{ file.path | absolute_url }}
                 {%- endif -%}
@@ -19,9 +18,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ description }}">
-    <meta name="author" content="Alexandr Musikhin">
+    <meta name="author" content="{{ site.author.name }}">
 
-    <title>{% if page.title %}{{ page.title }} | {% endif %}Alexandr Musikhin</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.author.name }}</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7c8eec21b2.js" crossorigin="anonymous"></script>
@@ -30,8 +29,8 @@
     <link rel="icon" href="{% link favicon.png %}" sizes="32x32">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="{{ twitter }}">
-    <meta name="twitter:creator" content="{{ twitter }}">
+    <meta name="twitter:site" content="@{{ site.author.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.author.twitter }}">
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{ image }}">
@@ -44,44 +43,27 @@
     <meta property="og:image" content="{{ image }}">
 
     <meta name="x-build-time" content="{{ site.time | date_to_rfc822 }}">
-    <link rel="alternate" type="application/rss+xml" title="tophackr blog" href="https://medium.com/feed/tophackr">
-
-    <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(47237412, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/47237412" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117276892-2"></script>
-    <script type="text/javascript"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-117276892-2'); </script>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.home.rss.name }}" href="{{ site.home.rss.url }}">
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-light">
+    <nav class="navbar navbar-expand navbar-light{% if page.url %} fixed-top{% endif %}">
         <div class="container-fluid container-sm flex-column flex-md-row">
 
             {% if page.url == '/' %}
-            <img src="{% link assets/hackr.svg %}" width="30" height="30" alt="Alexandr Musikhin">
+            <img src="{% link assets/hackr.svg %}" width="30" height="30" alt="{{ site.author.name }}">
             {% else %}
-            <span class="nav-item">Alexandr Musikhin</span>
+            <span class="nav-item">{{ site.author.name }}</span>
             {% endif %}
 
             <div class="navbar-nav-scroll">
                 <ul class="navbar-nav flex-row ml-md-auto">
+                    {% for item in site.home.navbar %}
                     <li class="nav-item">
-                        <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{% link index.md %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% link index.md %}#gitstat">GitStat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.name == 'projects.md' %} active{% endif %}" href="{% link projects.md %}">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.name == 'about.md' %} active{% endif %}" href="{% link about.md %}">About</a>
-                    </li>
-                    <!--<li class="nav-item">
-                        <a class="nav-link{% if page.name == 'contact.md' %} active{% endif %}" href="{% link contact.md %}">Contact</a>
-                    </li>-->
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.name == 'donate.md' %} active{% endif %}" href="{% link donate.md %}">Donate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://medium.com/@tophackr">Blog</a>
+                        {%- if item.file -%}
+                        <a class="nav-link{% if page.name == item.file %} active{% endif %}" href="{% link item.file %}">{{ item.name }}</a>
+                        {%- else -%}
+                        <a class="nav-link" href="{{ item.url }}">{{ item.name }}</a>
+                        {%- endif -%}
                     </li>
                 </ul>
             </div>
@@ -93,12 +75,5 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    {% if page.name == 'index.md' %}
-    <script src="{% link assets/main.js %}"></script>
-    {% endif %}
-    {% if page.name == 'feedback.md' %}
-    <script defer src="https://js.statickit.com/statickit.js"></script>
-    <script defer src="{% link assets/feedback.js %}"></script>
-    {% endif %}
 </body>
 </html>

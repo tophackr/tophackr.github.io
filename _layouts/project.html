@@ -7,7 +7,7 @@ layout: default
         <div class="col-md-8 mt-5">
             <div class="text-center">
                 {% for file in site.static_files %}
-                    {% assign path = 'assets/' | append: page.slug | append: '/icon' %}
+                    {% assign path = 'assets/' | append: page.slug | append: '/thumbnail' %}
                     {% if file.path contains path %}
                 <img class="img-fluid icon" src="{{ file.path }}" width="256">
                     {% endif %}
@@ -22,7 +22,7 @@ layout: default
                     <a class="nav-link" href="{{ page.repo }}">Source on GitHub</a>
                     {% endif %}
                     {% assign title = page.title | url_encode %}
-                    <a class="nav-link" href="{{ title | prepend: '/feedback?project=' | absolute_url }}">Support</a>
+                    <a class="nav-link" href="{{ site.author.email | prepend: 'mailto:' | uri_escape | append: 'subject?=' | append: title }}">Support</a>
                     {% for link in page.links %}
                     <a class="nav-link" href="{{ link[1] }}">{{ link[0] }}</a>
                     {% endfor %}
@@ -50,7 +50,7 @@ layout: default
                     {% endif %}
                 {% endfor %}
             </div>
-            <script async src="https://comments.app/js/widget.js?2" data-comments-app-website="2g9joENn" data-limit="10" data-page-id="{{ page.url }}" data-dislikes="1"></script>
+            <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="xQFIyFjK" data-limit="10" data-page-id="{{ page.url }}" data-dislikes="1"></script>
         </div>
     </div>
 </div>

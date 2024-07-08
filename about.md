@@ -10,12 +10,6 @@ I was born in Tyumen, Russia, and then moved to Anapa. In this city, I learned t
 ### Contact
 
 - [Telegram](https://t.me/tophackr)
-- [Email](mailto:tophackr@icloud.com)
-
-### Voice Chats
-
-- [TeamSpeak](ts3server://abc)
-- [Discord](https://discord.gg/mDE2WFZ)
 
 ### Social links
 
@@ -24,4 +18,3 @@ I was born in Tyumen, Russia, and then moved to Anapa. In this city, I learned t
 - [Instagram](https://instagram.com/tophackr/)
 - [Twitter](https://twitter.com/tophackr_com)
 - [Steam](https://steamcommunity.com/id/tophackr/)
-- [Twitch](https://www.twitch.tv/tophackr)

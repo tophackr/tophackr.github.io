@@ -12,7 +12,7 @@ title: Projects
                 <div class="card">
                     <div class="card-body">
                         {% for file in site.static_files %}
-                            {% assign path = 'assets/' | append: project.slug | append: '/thumbnail' %}
+                            {% assign path = 'assets/' | append: project.slug | append: '/banner' %}
                             {% if file.path contains path %}
                                 <img class="img-fluid rounded" src="{{ file.path }}">
                             {% endif %}

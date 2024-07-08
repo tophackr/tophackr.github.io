@@ -3,13 +3,46 @@ description: Part-time Developer.
 baseurl: ''
 url: 'https://tophackr.com'
 
+author:
+  name: Alexandr Musikhin
+  post: Part-time Developer
+  description: I make useless projects. I write in JS, Python, PHP, HTML, CSS.
+  email: contact@tophackr.com
+  twitter: tophackr_com
+
+home:
+  rss:
+    name: tophackr blog
+    url: "https://blog.tophackr.com/data/rss"
+  navbar:
+    - name: Home
+      file: index.md
+    - name: Projects
+      file: projects.md
+    - name: About
+      file: about.md
+    - name: Donate
+      file: donate.md
+    - name: Blog
+      url: "https://blog.tophackr.com"
+  buttons:
+    - icon: fas fa-pencil-alt
+      name: Writing
+      url: "https://blog.tophackr.com"
+    - icon: fas fa-camera
+      name: Photography
+      url: "https://unsplash.com/@tophackr"
+    - icon: fab fa-github
+      name: Code
+      url: "https://github.com/tophackr"
+
 collections:
   projects:
     output: true
-    permalink: /:title
+    permalink: /p/:title
 
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
 permalink: slug
-#exclude: ['.gitignore']
+exclude: [".gitignore", ".gitattributes", README.md, Gemfile, Gemfile.lock, CNAME]

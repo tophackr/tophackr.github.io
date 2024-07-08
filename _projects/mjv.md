@@ -6,11 +6,9 @@ description: Dark mode with full information about channels people and the serve
 type: TS Addon
 date: 2018-10-02
 large_button:
-  name: Buy MJV
-  url: https://gum.co/MJVTS3
+  name: Download MJV
+  url: https://github.com/tophackr/MJV/releases/download/v1.1-r/MJV.ts3_style
 repo: https://github.com/tophackr/mjv
-links:
-  "Free MJV": https://github.com/tophackr/MJV/releases/download/v1.1-r/MJV.ts3_style
 ---
 
 >❗ Info  
