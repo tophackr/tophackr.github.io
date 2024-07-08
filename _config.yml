@@ -18,11 +18,11 @@ home:
     - name: Home
       url: '/'
     - name: Projects
-      file: '/projects'
+      url: '/projects'
     - name: About
-      file: '/about'
+      url: '/about'
     - name: Donate
-      file: '/donate'
+      url: '/donate'
     - name: Blog
       url: "https://blog.tophackr.com"
   buttons:
