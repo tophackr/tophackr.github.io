@@ -1,31 +1,33 @@
 ---
-layout: default
+layout: container
 title: Projects
 ---
 
-<div class="container-fluid container-sm">
-    <div class="row">
-        <h1 class="col-12 mt-5 mb-4">Projects</h1>
-        {% for project in site.projects reversed %}
-        <div class="col-md-6 py-2">
-            <a class="is-card" href="{{ project.url }}">
-                <div class="card">
-                    <div class="card-body">
-                        {% for file in site.static_files %}
-                            {% assign path = 'assets/' | append: project.slug | append: '/banner' %}
-                            {% if file.path contains path %}
-                                <img class="img-fluid rounded" src="{{ file.path }}">
-                            {% endif %}
-                        {% endfor %}
-                        <h5 class="card-title text-body">
-                            <span class="mr-2">{{ project.title }}</span>
-                            <span class="badge badge-secondary">{{ project.type }}</span>
-                        </h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ project.subtitle | default: '&nbsp;' }}</h6>
-                    </div>
+<h1 class="text-4xl font-extrabold">Projects</h1>
+
+<div class="grid lg:grid-cols-2 gap-4 my-6">
+    {% for project in site.projects reversed %}
+        <a class="card card-side bg-base-300 shadow-xl" href="{{ project.url }}">
+            <div class="flex items-center justify-center m-4">
+                {% for file in site.static_files %}
+                    {% assign path = 'assets/' | append: project.slug | append: '/icon' %}
+                    {% if file.path contains path %}
+                        <img class="mask mask-squircle w-64 max-w-32" src="{{ file.path }}" alt="{{ project.title }}" />
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="card-body">
+                <h2 class="card-title">{{ project.title }}</h2>
+                <p class="opacity-50">{{ project.subtitle | default: '' }}</p>
+                <div class="card-actions justify-end">
+                    {% for tag in project.tags %}
+                        <div class="badge badge-primary badge-sm text-xs">
+                            {{ tag }}
+                        </div>
+                    {% endfor %}
                 </div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
+            </div>
+        </a>
+    {% endfor %}
 </div>
