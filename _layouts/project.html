@@ -1,57 +1,76 @@
 ---
-layout: default
+layout: container
 ---
 
-<div class="container-fluid container-sm">
-    <div class="row justify-content-center">
-        <div class="col-md-8 mt-5">
-            <div class="text-center">
-                {% for file in site.static_files %}
-                    {% assign path = 'assets/' | append: page.slug | append: '/thumbnail' %}
-                    {% if file.path contains path %}
-                <img class="img-fluid icon" src="{{ file.path }}" width="256">
-                    {% endif %}
-                {% endfor %}
-                <h1 class="mt-4">{{ page.title }}</h1>
-                <p class="subtitle is-4 mb-3">{{ page.subtitle }}</p>
-                {% if page.large_button %}
-                <a href="{{ page.large_button.url }}" class="btn btn-outline-dark btn-lg">{{ page.large_button.name }}</a>
-                {% endif %}
-                <nav class="nav flex-column">
-                    {% if page.repo %}
-                    <a class="nav-link" href="{{ page.repo }}">Source on GitHub</a>
-                    {% endif %}
-                    {% assign title = page.title | url_encode %}
-                    <a class="nav-link" href="{{ site.author.email | prepend: 'mailto:' | uri_escape | append: '?subject=' | append: title }}">Support</a>
-                    {% for link in page.links %}
-                    <a class="nav-link" href="{{ link[1] }}">{{ link[0] }}</a>
-                    {% endfor %}
-                </nav>
-            </div>
-            <div class="my-5">
-                {% if page.description %}
-                <div class="row">
-                    <div class="col-12">
-                        <p>{{ page.description }}</p>
-                    </div>
-                </div>
-                {% endif %}
-                <div class="row">
-                    <div class="col-12">
-                        {{ content }}
-                    </div>
-                </div>
-            </div>
-            <div class="mb-4">
-                {% for file in site.static_files %}
-                    {% assign path = 'assets/' | append: page.slug | append: '/picture' %}
-                    {% if file.path contains path %}
-                <img class="img-fluid rounded my-2" src="{{ file.path }}">
-                    {% endif %}
+<div class="grid place-items-center text-center">
+    {% for file in site.static_files %}
+        {% assign path = 'assets/' | append: page.slug | append: '/icon' %}
+        {% if file.path contains path %}
+            <img class="mask mask-squircle w-64" src="{{ file.path }}" alt="{{ page.title }}" />
+        {% endif %}
+    {% endfor %}
+
+    <h1 class="text-3xl font-bold mt-6">{{ page.title }}</h1>
+    <p class="my-3 opacity-50">{{ page.subtitle }}</p>
+
+    {% if page.large_button %}
+        <a class="btn btn-outline btn-primary btn-lg my-3" href="{{ page.large_button.url }}">
+            {{ page.large_button.name }}
+        </a>
+    {% endif %}
+
+    <nav class="flex flex-col gap-2 my-3">
+        {% if page.repo %}
+            <a class="link-primary" href="{{ page.repo }}">
+                Source on GitHub
+            </a>
+        {% endif %}
+        
+        {% assign title = page.title | url_encode %}
+        <a class="link-primary" href="{{ site.social-network.email | prepend: 'mailto:' | uri_escape | append: '?subject=' | append: title }}">
+            Support
+        </a>
+
+        {% if page.links %}
+            <div class="flex flex-row flex-wrap justify-center gap-6">
+                {% for link in page.links %}
+                    <a class="link-primary font-bold" href="{{ link[1] }}">
+                        {{ link[0] }}
+                    </a>
                 {% endfor %}
             </div>
-            <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="xQFIyFjK" data-limit="10" data-page-id="{{ page.url }}" data-dislikes="1"></script>
-            <div class="mt-5"></div>
-        </div>
+        {% endif %}
+    </nav>
+</div>
+
+<article class="prose dark:prose-invert prose-a:text-indigo-500 prose-a:no-underline min-w-full">
+    {% if page.description %}
+        <p class="text-center text-xl">{{ page.description }}</p>
+    {% endif %}
+
+    {{ content }}
+</article>
+
+<div class="flex justify-center">
+    <div class="carousel carousel-center bg-base-300 rounded-box h-[512px] space-x-4 p-4 my-4">
+        {% for file in site.static_files %}
+            {% assign path = 'assets/' | append: page.slug | append: '/picture' %}
+            {% if file.path contains path %}
+                <div class="carousel-item">
+                    <img class="rounded-box" src="{{ file.path }}" />
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
+
+<script
+    async
+    src="https://comments.app/js/widget.js?3"
+    data-comments-app-website="{{ site.comments_site_id }}"
+    data-limit="10"
+    data-page-id="{{ page.url }}"
+    data-dislikes="1"
+></script>
+
+<div class="mt-5"></div>
