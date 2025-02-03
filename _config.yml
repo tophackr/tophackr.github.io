@@ -1,20 +1,15 @@
 title: tophackr.com
-description: Part-time Developer.
+author: Alexandr Musikhin
+description: I make useless projects.
+avatar: '/assets/alexandr-musikhin-picture.png'
 baseurl: ''
 url: 'https://tophackr.com'
 
-author:
-  name: Alexandr Musikhin
-  post: Part-time Developer
-  description: I make useless projects. I write in JS, Python, PHP, HTML, CSS.
-  email: contact@tophackr.com
-  twitter: tophackr_com
+social-network:
+    email: 'contact@tophackr.com'
+    twitter: tophackr_com
 
-home:
-  rss:
-    name: tophackr blog
-    url: "https://blog.tophackr.com/data/rss"
-  navbar:
+navbar-links:
     - name: Home
       url: '/'
     - name: Projects
@@ -24,25 +19,27 @@ home:
     - name: Donate
       url: '/donate'
     - name: Blog
-      url: "https://blog.tophackr.com"
-  buttons:
-    - icon: fas fa-pencil-alt
-      name: Writing
-      url: "https://blog.tophackr.com"
-    - icon: fas fa-camera
-      name: Photography
-      url: "https://unsplash.com/@tophackr"
+      url: 'https://blog.tophackr.com'
+
+home-buttons:
+    - icon: fas fa-cube
+      name: Projects
+      url: '/projects'
     - icon: fab fa-github
       name: Code
-      url: "https://github.com/tophackr"
+      url: 'https://github.com/tophackr'
+
+comments_site_id: xQFIyFjK #t3lKNYDb
 
 collections:
-  projects:
-    output: true
-    permalink: /p/:title
+    projects:
+        output: true
+        permalink: /p/:title
+        sort_by: date
 
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
 permalink: slug
-exclude: [".gitignore", ".gitattributes", README.md, Gemfile, Gemfile.lock, CNAME]
+exclude:
+    ['.gitignore', '.gitattributes', README.md, Gemfile, Gemfile.lock, CNAME]
