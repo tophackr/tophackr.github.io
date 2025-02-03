@@ -1,0 +1,25 @@
+<nav class="container mx-auto{% unless page.url == '/' %} mb-6{% endunless %}">
+    <div class="navbar bg-base-100 text-base-content flex-col sm:flex-row">
+        <div class="flex-1">
+            {% if page.url == '/' %}
+                <img src="{% link assets/hackr.svg %}" width="30" height="30" alt="{{ site.author }}" />
+            {% else %}
+                <a class="btn btn-ghost text-xl" href="/">
+                    {{ site.author }}
+                </a>
+            {% endif %}
+        </div>
+    
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                {% for item in site.navbar-links %}
+                    <li>
+                        <a class="{% if page.url == item.url %}active{% endif %}" href="{{ item.url }}">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

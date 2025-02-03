@@ -1,0 +1,64 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% assign title = page.title | default: site.author %}
+
+    {% capture description %}
+        {% if page.description %}
+            {{ page.description | strip_html | xml_escape | smartify }}
+        {% elsif page.title %}
+            {{ page.excerpt | strip_html | xml_escape | smartify }}
+        {% else %}
+            {{ site.description | xml_escape | smartify }}
+        {% endif %}
+    {% endcapture %}
+
+    {% capture image %}
+        {% if page.collection == 'projects' %}
+            {% for file in site.static_files %}
+                {% assign path = 'assets/' | append: page.slug | append: '/thumbnail' %}
+                {% if file.path contains path %} {{ file.path }} {% endif %}
+            {% endfor %}
+        {% else %}
+            {{ site.avatar }}
+        {% endif %}
+    {% endcapture %}
+
+    <title>{{ title }}</title>
+
+    {% capture author %}
+        {% if page.author %}
+            {{  page.author | strip_html | smartify }}
+        {% else %}
+            {{ site.author | smartify }}
+        {% endif %}
+    {% endcapture %}
+
+    <meta name="author" content="{{ author }}">
+
+    <meta name="description" content="{{ description }}">
+
+    {% if site.keywords %}
+        <meta name="keywords" content="{{ site.keywords }}">
+    {% endif %}
+
+    {% include head-stylesheet.html %}
+    {% include footer-scripts.html %}
+
+    {% include og.html %}
+    {% include twitter.html %}
+
+    {% assign favicon_exists = site.static_files | where: "path", "/favicon.png" | size %}
+    {% if favicon_exists == 1 %}
+        <link rel="icon" href="{{ '/favicon.png' | relative_url }}" />
+    {% endif %}
+  
+    {% if page.head-extra %}
+      {% for file in page.head-extra %}
+        {% include {{ file }} %}
+      {% endfor %}
+    {% endif %}
+
+    <meta name="x-build-time" content="{{ site.time | date_to_rfc822 }}" />
+</head>
