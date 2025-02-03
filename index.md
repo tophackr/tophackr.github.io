@@ -2,19 +2,20 @@
 layout: default
 ---
 
-<div class="container-fluid container-sm">
-    <div class="row justify-content-center align-items-md-center h-100">
-        <div class="col-md-8 text-center mb-5 mt-5">
-            <img src="{% link assets/alexandr-musikhin-picture_min.png %}" class="img-fluid avatar">
-            <h1>{{ site.author.name }}</h1>
-            <p class="subtitle is-4">{{ site.author.post }}</p>
-            <p class="subtitle">{{ site.author.description }}</p>
-            {% for button in site.home.buttons %}
-            <a class="btn btn-light btn-lg" href="{{ button.url }}">
-                <i class="{{ button.icon }}"></i>
-                {{ button.name }}
-            </a>
-            {% endfor %}
-        </div>
+<div class="avatar mb-6">
+    <div class="ring-primary ring-offset-base-100 w-64 rounded-full ring ring-offset-4">
+        <img src="{% link assets/alexandr-musikhin-picture_min.png %}" alt={{ site.author }}>
     </div>
+</div>
+
+<h1 class="text-4xl font-bold">{{ site.author }}</h1>
+<p class="text-xl my-4">{{ site.description }}</p>
+
+<div class="grid grid-flow-col gap-4">
+    {% for button in site.home-buttons %}
+        <a class="btn btn-primary" href="{{ button.url }}">
+            <i class="{{ button.icon }}"></i>
+            {{ button.name }}
+        </a>
+    {% endfor %}
 </div>
