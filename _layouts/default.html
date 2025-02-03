@@ -1,76 +1,11 @@
-<html>
-<head>
-    {%- assign title = page.title | default: site.author.name -%}
-    {%- capture description -%}{% if page.description %}{{ page.description | strip_html | smartify }}{% elsif page.title %}{{ page.excerpt | strip_html | smartify }}{% else %}{{ site.description | smartify }}{% endif %}{%- endcapture -%}
-    {%- capture image -%}
-        {%- if page.collection == 'projects' -%}
-            {%- for file in site.static_files -%}
-                {%- assign path = 'assets/' | append: page.slug | append: '/thumbnail' -%}
-                {%- if file.path contains path -%}
-                    {{ file.path | absolute_url }}
-                {%- endif -%}
-            {%- endfor -%}
-        {%- else -%}
-            {{ 'assets/alexandr-musikhin-picture.png' | absolute_url }}
-        {%- endif -%}
-    {%- endcapture -%}
+---
+layout: base
+---
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="{{ description }}">
-    <meta name="author" content="{{ site.author.name }}">
-
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.author.name }}</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/7c8eec21b2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% link assets/main.css %}">
-
-    <link rel="icon" href="{% link favicon.png %}" sizes="32x32">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{{ site.author.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.author.twitter }}">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image" content="{{ image }}">
-
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ image }}">
-
-    <meta name="x-build-time" content="{{ site.time | date_to_rfc822 }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.home.rss.name }}" href="{{ site.home.rss.url }}">
-</head>
-<body>
-    <nav class="navbar navbar-expand navbar-light{% if page.url == '/' %} fixed-top{% endif %}">
-        <div class="container-fluid container-sm flex-column flex-md-row">
-
-            {% if page.url == '/' %}
-            <img src="{% link assets/hackr.svg %}" width="30" height="30" alt="{{ site.author.name }}">
-            {% else %}
-            <span class="nav-item">{{ site.author.name }}</span>
-            {% endif %}
-
-            <div class="navbar-nav-scroll">
-                <ul class="navbar-nav flex-row ml-md-auto">
-                    {%- for item in site.home.navbar -%}
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
-                    </li>
-                    {%- endfor -%}
-                </ul>
-            </div>
-
+<main class="hero min-h-[calc(100vh-120px)] sm:min-h-[calc(100vh-88px)]">
+    <div class="hero-content text-center">
+        <div class="max-w-md">
+            {{ content }}
         </div>
-    </nav>
-    {{ content }}
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-</body>
-</html>
+    </div>
+</main>
