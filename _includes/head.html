@@ -17,7 +17,7 @@
     {% capture image %}
         {% if page.collection == 'projects' %}
             {% for file in site.static_files %}
-                {% assign path = 'assets/' | append: page.slug | append: '/thumbnail' %}
+                {% assign path = 'assets/' | append: page.slug | append: '/icon' %}
                 {% if file.path contains path %} {{ file.path }} {% endif %}
             {% endfor %}
         {% else %}
