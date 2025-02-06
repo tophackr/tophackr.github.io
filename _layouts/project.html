@@ -63,22 +63,3 @@ layout: container
         {% endfor %}
     </div>
 </div>
-
-<script>
-    (function() {
-        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-
-        const script = document.createElement('script')
-        script.async = true
-        script.src = "https://comments.app/js/widget.js?3"
-        script.setAttribute('data-comments-app-website', "{{ site.comments_site_id }}")
-        script.setAttribute('data-limit', "10")
-        script.setAttribute('data-page-id', "{{ page.url }}")
-        script.setAttribute('data-dislikes', "1")
-        script.setAttribute('data-dark', isDarkMode ? "1" : "0")
-
-        document.body.appendChild(script);
-    })()
-</script>
-
-<div class="mt-5"></div>
