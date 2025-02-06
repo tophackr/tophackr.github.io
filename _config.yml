@@ -6,40 +6,32 @@ baseurl: ''
 url: 'https://tophackr.com'
 
 social-network:
-    email: 'contact@tophackr.com'
-    twitter: tophackr_com
-
-navbar-links:
-    - name: Home
-      url: '/'
-    - name: Projects
-      url: '/projects'
-    - name: About
-      url: '/about'
-    - name: Donate
-      url: '/donate'
-    - name: Blog
-      url: 'https://blog.tophackr.com'
-
-home-buttons:
-    - icon: fas fa-cube
-      name: Projects
-      url: '/projects'
-    - icon: fab fa-github
-      name: Code
-      url: 'https://github.com/tophackr'
+  email: 'contact@tophackr.com'
+  twitter: tophackr_com
 
 comments_site_id: xQFIyFjK #t3lKNYDb
 
 collections:
-    projects:
-        output: true
-        permalink: /p/:title
-        sort_by: date
+  projects:
+    output: true
+    permalink: /p/:title
+    sort_by: date
+
+defaults:
+  - scope:
+      path: ''
+      type: 'projects'
+    values:
+      layout: 'project'
 
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
 permalink: slug
 exclude:
-    ['.gitignore', '.gitattributes', README.md, Gemfile, Gemfile.lock, CNAME]
+  - '.gitignore'
+  - '.gitattributes'
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - CNAME

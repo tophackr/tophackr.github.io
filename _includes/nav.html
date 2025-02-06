@@ -12,7 +12,7 @@
     
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1">
-                {% for item in site.navbar-links %}
+                {% for item in site.data.navigation %}
                     <li>
                         <a class="{% if page.url == item.url %}active{% endif %}" href="{{ item.url }}">
                             {{ item.name }}
