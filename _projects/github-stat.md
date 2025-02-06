@@ -1,5 +1,4 @@
 ---
-layout: project
 title: GitHub Stat
 subtitle: Track your activity on GitHub
 description: Track the activity of developers, the number of commits, open and closed issues, as well as other metrics, which helps to better understand the dynamics of the project and its development.

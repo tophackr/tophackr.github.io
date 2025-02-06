@@ -1,5 +1,4 @@
 ---
-layout: project
 title: Your Landing
 subtitle: Platform for your site, basic Jekyll and Git
 description: Your Landing is a platform on which you can create your site, you need to know the basic Jekyll and Git
