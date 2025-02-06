@@ -4,7 +4,7 @@ layout: default
 
 <div class="avatar mb-6">
     <div class="ring-primary ring-offset-base-100 w-64 rounded-full ring ring-offset-4">
-        <img src="{% link assets/alexandr-musikhin-picture_min.png %}" alt={{ site.author }}>
+        <img src="{{ site.avatar | relative_url }}" alt={{ site.author }}>
     </div>
 </div>
 
