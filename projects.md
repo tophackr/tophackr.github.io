@@ -9,9 +9,9 @@ title: Projects
     {% for project in site.projects reversed %}
         <a class="card card-side bg-base-300 shadow-xl" href="{{ project.url }}">
             <div class="flex items-center justify-center m-4">
+                {% include file-path.html collection=project.collection slug=project.slug %}
                 {% for file in site.static_files %}
-                    {% assign path = 'assets/' | append: project.slug | append: '/icon' %}
-                    {% if file.path contains path %}
+                    {% if file.path contains filePath %}
                         <img class="mask mask-squircle w-64 max-w-32" src="{{ file.path }}" alt="{{ project.title }}" />
                     {% endif %}
                 {% endfor %}
