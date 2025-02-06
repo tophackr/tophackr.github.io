@@ -4,8 +4,8 @@ layout: container
 
 <div class="grid place-items-center text-center">
     {% for file in site.static_files %}
-        {% assign path = 'assets/' | append: page.slug | append: '/icon' %}
-        {% if file.path contains path %}
+        {% include file-path.html %}
+        {% if file.path contains filePath %}
             <img class="mask mask-squircle w-64" src="{{ file.path }}" alt="{{ page.title }}" />
         {% endif %}
     {% endfor %}
@@ -54,8 +54,8 @@ layout: container
 <div class="flex justify-center">
     <div class="carousel carousel-center bg-base-300 rounded-box h-[512px] space-x-4 p-4 my-4">
         {% for file in site.static_files %}
-            {% assign path = 'assets/' | append: page.slug | append: '/picture' %}
-            {% if file.path contains path %}
+            {% include file-path.html icon='picture' %}
+            {% if file.path contains filePath %}
                 <div class="carousel-item">
                     <img class="rounded-box" src="{{ file.path }}" />
                 </div>
