@@ -1,0 +1,10 @@
+- name: Home
+  url: '/'
+- name: Projects
+  url: '/projects'
+- name: About
+  url: '/about'
+- name: Donate
+  url: '/donate'
+- name: Blog
+  url: 'https://blog.tophackr.com'
