@@ -15,14 +15,13 @@ collections:
   projects:
     output: true
     permalink: /p/:title
-    sort_by: date
 
 defaults:
   - scope:
       path: ''
-      type: 'projects'
+      type: projects
     values:
-      layout: 'project'
+      layout: project
 
 markdown: kramdown
 timezone: Europe/Moscow
