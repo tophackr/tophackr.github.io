@@ -1,5 +1,5 @@
 ---
-title: Bree0 Bot
+title: Bree0
 subtitle: Multifunctional Bot for Discord
 description: The bot is designed to improve the participant's interaction with the client. Clans, Server Banner, Activity and Levels!
 tags:
