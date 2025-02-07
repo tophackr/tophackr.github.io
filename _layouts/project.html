@@ -10,8 +10,8 @@ layout: container
         {% endif %}
     {% endfor %}
 
-    <h1 class="text-3xl font-bold mt-6">{{ page.title }}</h1>
-    <h2 class="my-3 opacity-50">{{ page.subtitle }}</h2>
+    <h1 class="text-5xl font-bold mt-6">{{ page.title }}</h1>
+    <h2 class="text-4xl my-3 opacity-50">{{ page.subtitle }}</h2>
 
     {% if page.large_button %}
         <a class="btn btn-outline btn-primary btn-lg my-3" href="{{ page.large_button.url }}">
@@ -51,13 +51,13 @@ layout: container
     {{ content }}
 </article>
 
-<div class="flex justify-center">
+<div class="flex justify-center mb-12">
     <div class="carousel carousel-center bg-base-300 rounded-box space-x-4 p-4 my-4">
         {% for file in site.static_files %}
             {% include file-path.html icon='picture' %}
             {% if file.path contains filePath %}
-                <div class="carousel-item w-[calc(100vw-2rem)] sm:w-[calc(100vw-5rem)] md:w-[calc(100vw-10rem)]">
-                    <img class="rounded-box" src="{{ file.path }}" />
+                <div class="carousel-item  w-full">
+                    <img id="{{ file.basename }}" class="rounded-box w-full" src="{{ file.path }}" />
                 </div>
             {% endif %}
         {% endfor %}
