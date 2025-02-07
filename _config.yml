@@ -9,8 +9,6 @@ social-network:
   email: 'contact@tophackr.com'
   twitter: tophackr_com
 
-comments_site_id: xQFIyFjK #t3lKNYDb
-
 collections:
   projects:
     output: true
