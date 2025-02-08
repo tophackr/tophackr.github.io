@@ -1,9 +1,12 @@
-title: tophackr.com
-author: Alexandr Musikhin
+title: Alexandr Musikhin
 description: Passionate about developing innovative solutions and tools. I am open for cooperation and exchange of experience.
-avatar: 'assets/avatar.png'
 baseurl: ''
 url: 'https://tophackr.com'
+
+author: tophackr
+twitter:
+  username: tophackr_com
+  card: summary
 
 social-network:
   email: 'contact@tophackr.com'
@@ -21,6 +24,10 @@ defaults:
     values:
       toc: true
       layout: project
+  - scope:
+      path: ''
+    values:
+      image: /assets/avatar.png
 
 toc:
   max_level: 1
@@ -28,9 +35,13 @@ toc:
   item_class: link-primary
   item_prefix: ''
 
+seo:
+  type: Person
+
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
+locale: en
 exclude:
   - '.gitignore'
   - '.gitattributes'
