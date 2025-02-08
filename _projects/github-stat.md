@@ -13,4 +13,6 @@ repo: https://github.com/tophackr/github-stat
 links:
   "ProductHunt": https://www.producthunt.com/posts/github-stat
   "Donate": "https://t.me/tribute/app?startapp=dkyx"
+redirect_from:
+  - /p/github-stat
 ---

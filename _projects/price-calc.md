@@ -13,4 +13,6 @@ large_button:
 repo: https://github.com/tophackr/price-calc
 links:
   "Donate": https://t.me/tribute/app?startapp=dktj
+redirect_from:
+  - /p/price-calc
 ---

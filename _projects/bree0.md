@@ -8,4 +8,6 @@ date: 2024-07-01
 large_button:
   name: Support Server
   url: https://discord.gg/mDE2WFZ
+redirect_from:
+  - /p/bree0
 ---
