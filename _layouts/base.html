@@ -10,10 +10,10 @@ common-ext-js:
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
 
-{% include head.html %}
+{%- include head.html -%}
 
 <body>
-    {% include nav.html %}
+    {%- include nav.html -%}
 
     {{ content }}
 </body>

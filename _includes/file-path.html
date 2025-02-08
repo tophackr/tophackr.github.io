@@ -1,4 +1,4 @@
-{% assign fileIcon = include.icon | default: 'icon' | prepend: '/' %}
-{% assign fileSlug = include.slug | default: page.slug %}
-{% assign fileCollection = include.collection | default: page.collection %}
-{% assign filePath = fileCollection | append: '/' | append: fileSlug | append: fileIcon %}
+{%- assign fileIcon = include.icon | default: 'icon' | prepend: '/' -%}
+{%- assign fileSlug = include.slug | default: page.slug -%}
+{%- assign fileCollection = include.collection | default: page.collection -%}
+{%- assign filePath = fileCollection | append: '/' | append: fileSlug | append: fileIcon -%}
