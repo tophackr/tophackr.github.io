@@ -5,11 +5,11 @@ permalink: /
 
 <div class="avatar mb-6">
     <div class="ring-primary ring-offset-base-100 w-64 rounded-full ring ring-offset-4">
-        <img src="{{ page.image | relative_url }}" alt={{ site.author }}>
+        <img src="{{ page.image | relative_url }}" alt={{ site.title }}>
     </div>
 </div>
 
-<h1 class="text-4xl font-bold">{{ site.author }}</h1>
+<h1 class="text-4xl font-bold">{{ site.title }}</h1>
 <p class="text-xl my-4">{{ site.description }}</p>
 
 <div class="grid grid-flow-col gap-4">
