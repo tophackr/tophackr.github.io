@@ -1,11 +1,11 @@
-<nav class="container mx-auto{%- unless page.url == '/' -%} mb-6{%- endunless -%}">
+<nav class="container mx-auto{% unless page.url == '/' %} mb-6{% endunless %}">
     <div class="navbar bg-base-100 text-base-content flex-col sm:flex-row">
         <div class="flex-1">
             {%- if page.url == '/' -%}
-                <img src="{%- link assets/hackr.svg -%}" width="30" height="30" alt="{{ site.author }}" />
+                <img src="{%- link assets/hackr.svg -%}" width="30" height="30" alt="{{ site.title }}" />
             {%- else -%}
                 <a class="btn btn-ghost text-xl" href="/">
-                    {{ site.author }}
+                    {{ site.title }}
                 </a>
             {%- endif -%}
         </div>
