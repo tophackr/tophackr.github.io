@@ -1,6 +1,7 @@
 ---
 title: Status
 subtitle: Tracking service
+image: /projects/status/icon.png
 archive: true
 tags:
   - Web Layout

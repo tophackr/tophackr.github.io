@@ -2,6 +2,7 @@
 layout: project
 title: Emoji Calendar
 subtitle: 📅 Regular calendar
+image: /projects/emojicalendar/icon.png
 archive: true
 tags:
   - Web Layout

@@ -2,6 +2,7 @@
 title: MJV
 subtitle: Theme for TeamSpeak 3
 description: Dark mode with full information about channels people and the server.
+image: /projects/mjv/icon.png
 archive: true
 tags:
   - TS Addon
