@@ -1,6 +1,6 @@
 ---
 title: Price Calc
-subtitle: Find out the full price of the product in a matter of seconds!
+subtitle: Find out the full price of the product
 description: Enter the price and weight, and the app will automatically calculate the total amount. The simple interface, support for different currencies, and payment history will help you manage your finances easily.
 tags: 
   - Telegram Mini App
