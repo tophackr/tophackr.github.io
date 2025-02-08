@@ -6,7 +6,8 @@ title: Projects
 <h1 class="text-4xl font-extrabold">Projects</h1>
 
 <div class="grid lg:grid-cols-2 gap-4 my-6">
-    {% for project in site.projects reversed %}
+    {% assign projects = site.projects | where: 'archive', nil %}
+    {% for project in projects reversed %}
         <a class="card card-side bg-base-300 shadow-xl p-4" href="{{ project.url }}">
             <div class="flex items-center justify-center mr-4">
                 {% include file-path.html collection=project.collection slug=project.slug %}
