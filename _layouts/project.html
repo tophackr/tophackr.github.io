@@ -24,7 +24,7 @@ layout: container
     {% endif %}
 
     <nav class="flex flex-row flex-wrap justify-center gap-2 max-w-lg my-3">
-        {% toc %}
+        {{ page.content | toc_only }}
 
         {% for link in page.links %}
             <a class="link-primary" href="{{ link[1] }}">
