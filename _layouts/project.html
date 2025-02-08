@@ -11,7 +11,7 @@ layout: container
     {% endfor %}
 
     <h1 class="text-5xl font-bold mt-6">{{ page.title }}</h1>
-    <h2 class="text-4xl my-3 opacity-50 max-w-lg">{{ page.subtitle }}</h2>
+    <h2 class="text-4xl opacity-50 max-w-lg my-3">{{ page.subtitle }}</h2>
 
     {% if page.large_button %}
         <a class="btn btn-outline btn-primary btn-lg my-3" href="{{ page.large_button.url }}">
@@ -19,47 +19,53 @@ layout: container
         </a>
     {% endif %}
 
-    <nav class="flex flex-col gap-2 my-3">
-        {% if page.repo %}
-            <a class="link-primary" href="{{ page.repo }}">
-                Source on GitHub
+    <nav class="flex flex-row flex-wrap justify-center gap-2 max-w-lg my-3">
+        {% for link in page.links %}
+            <a class="link-primary" href="{{ link[1] }}">
+                {{ link[0] }}
             </a>
-        {% endif %}
-        
+        {% endfor %}
+
         {% assign title = page.title | url_encode %}
         <a class="link-primary" href="{{ site.social-network.email | prepend: 'mailto:' | uri_escape | append: '?subject=' | append: title }}">
             Support
         </a>
 
-        {% if page.links %}
-            <div class="flex flex-row flex-wrap justify-center gap-6">
-                {% for link in page.links %}
-                    <a class="link-primary font-bold" href="{{ link[1] }}">
-                        {{ link[0] }}
-                    </a>
-                {% endfor %}
+        {% if page.repo %}
+            <div class="dropdown dropdown-bottom flex items-center">
+                <div tabindex="0" role="button" class="btn btn-primary btn-circle btn-outline w-4 h-4 min-h-4 text-[0.5rem]">
+                    <i class="fas fa-ellipsis"></i>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-48 shadow">
+                    <li>
+                        <a class="link-primary" href="{{ page.repo }}">
+                            Source on GitHub
+                        </a>
+                    </li>
+                </ul>
             </div>
         {% endif %}
     </nav>
 </div>
 
-<article class="prose dark:prose-invert prose-a:text-indigo-500 prose-a:no-underline min-w-full">
+<article class="prose dark:prose-invert prose-a:text-indigo-500 prose-a:no-underline min-w-full mb-12">
     {% if page.description %}
         <p class="text-center text-xl">{{ page.description }}</p>
     {% endif %}
 
+    <div class="flex justify-center">
+        <div class="carousel carousel-center bg-base-300 rounded-box space-x-4 p-4 {% if page.description %}mb-6{% else %}my-6{% endif %}">
+            {% for file in site.static_files %}
+                {% include file-path.html icon='picture' %}
+                {% if file.path contains filePath %}
+                    <div class="carousel-item w-full">
+                        <img id="{{ file.basename }}" class="rounded-box w-full m-0" src="{{ file.path }}" />
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
     {{ content }}
 </article>
 
-<div class="flex justify-center mb-12">
-    <div class="carousel carousel-center bg-base-300 rounded-box space-x-4 p-4 my-4">
-        {% for file in site.static_files %}
-            {% include file-path.html icon='picture' %}
-            {% if file.path contains filePath %}
-                <div class="carousel-item  w-full">
-                    <img id="{{ file.basename }}" class="rounded-box w-full" src="{{ file.path }}" />
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
