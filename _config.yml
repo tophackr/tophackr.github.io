@@ -36,6 +36,7 @@ exclude:
   - '.gitignore'
   - '.gitattributes'
   - README.md
+  - COMMIT_CONVENTION.md
   - Gemfile
   - Gemfile.lock
   - CNAME
