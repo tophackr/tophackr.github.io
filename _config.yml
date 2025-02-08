@@ -12,7 +12,7 @@ social-network:
 collections:
   projects:
     output: true
-    permalink: /p/:title
+    permalink: /:title
 
 defaults:
   - scope:
