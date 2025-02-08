@@ -19,7 +19,14 @@ defaults:
       path: ''
       type: projects
     values:
+      toc: true
       layout: project
+
+toc:
+  max_level: 1
+  list_class: flex flex-row flex-wrap justify-center gap-2
+  item_class: link-primary
+  item_prefix: ''
 
 markdown: kramdown
 timezone: Europe/Moscow
