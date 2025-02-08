@@ -31,7 +31,6 @@ toc:
 markdown: kramdown
 timezone: Europe/Moscow
 encoding: utf-8
-permalink: slug
 exclude:
   - '.gitignore'
   - '.gitattributes'
