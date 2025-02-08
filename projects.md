@@ -7,17 +7,17 @@ title: Projects
 
 <div class="grid lg:grid-cols-2 gap-4 my-6">
     {% for project in site.projects reversed %}
-        <a class="card card-side bg-base-300 shadow-xl" href="{{ project.url }}">
-            <div class="flex items-center justify-center m-4">
+        <a class="card card-side bg-base-300 shadow-xl p-4" href="{{ project.url }}">
+            <div class="flex items-center justify-center mr-4">
                 {% include file-path.html collection=project.collection slug=project.slug %}
                 {% for file in site.static_files %}
                     {% if file.path contains filePath %}
-                        <img class="mask mask-squircle w-64 max-w-32" src="{{ file.path }}" alt="{{ project.title }}" />
+                        <img class="mask mask-squircle w-56 max-w-28" src="{{ file.path }}" alt="{{ project.title }}" />
                     {% endif %}
                 {% endfor %}
             </div>
 
-            <div class="card-body">
+            <div class="card-body p-0">
                 <h2 class="card-title">{{ project.title }}</h2>
                 <p class="opacity-50">{{ project.subtitle | default: '' }}</p>
                 <div class="card-actions justify-end">
