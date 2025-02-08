@@ -13,6 +13,10 @@ layout: container
     <h1 class="text-5xl font-bold mt-6">{{ page.title }}</h1>
     <h2 class="text-4xl opacity-50 max-w-lg my-3">{{ page.subtitle }}</h2>
 
+    {% if page.archive %}
+        <span class="badge badge-warning badge-lg">archive</span>
+    {% endif %}
+
     {% if page.large_button %}
         <a class="btn btn-outline btn-primary btn-lg my-3" href="{{ page.large_button.url }}">
             {{ page.large_button.name }}
@@ -20,6 +24,8 @@ layout: container
     {% endif %}
 
     <nav class="flex flex-row flex-wrap justify-center gap-2 max-w-lg my-3">
+        {% toc %}
+
         {% for link in page.links %}
             <a class="link-primary" href="{{ link[1] }}">
                 {{ link[0] }}
