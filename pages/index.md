@@ -5,7 +5,7 @@ permalink: /
 
 <div class="avatar mb-6">
     <div class="ring-primary ring-offset-base-100 w-64 rounded-full ring ring-offset-4">
-        <img src="{{ site.avatar | relative_url }}" alt={{ site.author }}>
+        <img src="{{ page.image | relative_url }}" alt={{ site.author }}>
     </div>
 </div>
 
@@ -13,10 +13,10 @@ permalink: /
 <p class="text-xl my-4">{{ site.description }}</p>
 
 <div class="grid grid-flow-col gap-4">
-    {% for button in site.data.home-buttons %}
+    {%- for button in site.data.home-buttons -%}
         <a class="btn btn-primary" href="{{ button.url }}">
             <i class="{{ button.icon }}"></i>
             {{ button.name }}
         </a>
-    {% endfor %}
+    {%- endfor -%}
 </div>
