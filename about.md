@@ -5,7 +5,15 @@ title: About
 
 # About
 
-I was born in Tyumen, Russia, and then moved to Anapa. In this city, I learned that the Internet is a big thing and there met with [fyfywka](https://instagram.com/fyfywka/), who introduced me to programming. Now I live in the city of Sochi and do useless projects from which I do not receive money.
+My name is Alexander, and I'm passionate about open-source, automation, and cybersecurity. I like to create smart, efficient, and secure solutions that make technology more convenient and accessible.  
+
+### Open-Source and Automation  
+
+I actively develop open-source projects because I believe in the power of community and collaborative technology development. In my repositories, you can find tools for automation, workflow optimization, and productivity improvement. I like to simplify complex tasks and find elegant solutions.  
+
+### Cybersecurity  
+
+Safety is my priority. I research vulnerabilities, develop data protection tools, and share my findings with the community. It is important to me that the code is reliable, and users can trust the technologies they work with.  
 
 ### Contact
 
