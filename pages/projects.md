@@ -1,6 +1,7 @@
 ---
 layout: container
 title: Projects
+permalink: /projects
 ---
 
 <h1 class="text-4xl font-extrabold">Projects</h1>
