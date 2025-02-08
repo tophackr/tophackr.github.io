@@ -1,13 +1,15 @@
 ---
-title: Your Landing
-subtitle: Platform for your site, basic Jekyll and Git
-description: Your Landing is a platform on which you can create your site, you need to know the basic Jekyll and Git
-type: Web Layout
-date: 2020-01-08
-repo: https://github.com/your-landing
+title: GitHub Stat
+subtitle: Track your activity on GitHub
+description: Track the activity of developers, the number of commits, open and closed issues, as well as other metrics, which helps to better understand the dynamics of the project and its development.
+archive: true
+tags:
+  - NextJS
+date: 2025-02-02
 large_button:
-  name: Go to EmojiCalendar
-  url: https://emojicalendar.tophackr.com
+  name: Check your Stat
+  url: https://gitstat.tophackr.com
+repo: https://github.com/tophackr/github-stat
 links:
-  "Docs": https://github.com/your-landing/example-1/wiki
+  "ProductHunt": https://www.producthunt.com/posts/github-stat
 ---
