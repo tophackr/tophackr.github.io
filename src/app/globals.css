@@ -396,7 +396,15 @@ a {
   display: inline-flex;
   gap: 0.25rem;
   align-items: center;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   cursor: pointer;
+}
+
+.json-content .string:has(.clickable-link) {
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .icon-link {
