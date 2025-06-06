@@ -20,7 +20,10 @@ export function TextEditor({ title, tabs, getCurrentData }: TextEditorProps) {
         {/* macOS Window Controls */}
         <div className="window-header">
           <div className="traffic-lights">
-            <button className="traffic-light red" />
+            <button
+              className="traffic-light red"
+              onClick={() => window.close()}
+            />
             <button className="traffic-light yellow" />
             <button className="traffic-light green" />
           </div>
