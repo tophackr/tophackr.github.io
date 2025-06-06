@@ -34,6 +34,13 @@ export const projects: Projects = {
       url: 'https://github.com/tophackr/tmaui',
     },
     {
+      name: 'Price Calc',
+      description:
+        'Find out the full price of the product in a matter of seconds! Enter the price and weight, and the app will automatically calculate the total amount. The simple interface, support for different currencies, and payment history will help you manage your finances easily. Start saving today!',
+      tech: ['Next.js', 'Redux', 'Telegram Mini Apps', 'TailwindCSS'],
+      url: 'https://github.com/tophackr/price-calc',
+    },
+    {
       name: 'GitHub Stat',
       description:
         'Track Your Activity on GitHub. Monitor and analyze developer performance with precision. This tool tracks commit activity, opened and closed issues, and a variety of project metrics, helping teams gain clear insight into development dynamics, productivity trends, and project evolution over time.',
