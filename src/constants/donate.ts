@@ -11,10 +11,8 @@ export const donate: Donate = {
   },
   monthly: 'https://tophackr.gumroad.com/l/gmbns',
   crypto: {
-    USDT_TON: 'UQCVLISp4nuwasrQlnENC-kVDjeZYmq4zHhAeTRu_UI86cgo',
-    USDT_TRC20: 'TE4hhkDFdkmF7RjoTkA6pQwPJNuXGtdCat',
-    TON: 'UQCVLISp4nuwasrQlnENC-kVDjeZYmq4zHhAeTRu_UI86cgo',
-    BTC: '13cAm4BtJ8sSTmCsn4kygy4hUdF7a2x6LS',
-    NOT: 'UQCVLISp4nuwasrQlnENC-kVDjeZYmq4zHhAeTRu_UI86cgo',
+    USDT_TON: 'UQDw_IxaBqpU-JzEF6gdSsBEKbbzfC-6kC8oBu5SSNM8_FM-',
+    TON: 'UQDw_IxaBqpU-JzEF6gdSsBEKbbzfC-6kC8oBu5SSNM8_FM-',
+    NOT: 'UQDw_IxaBqpU-JzEF6gdSsBEKbbzfC-6kC8oBu5SSNM8_FM-',
   },
 };
